@@ -1,0 +1,9 @@
+<h1>Shows</h1>
+
+<div *ngFor="let show of shows">
+  {{ show.attributes.ShowName }}
+</div>
+
+<button (click)="loadMore()" *ngIf="showLoadBtn">Load more...</button>
+<div class="loader" *ngIf="loading">loading content. Please wait...</div>
+<div *ngIf="!showLoadBtn" class="message">No more data to load</div>
